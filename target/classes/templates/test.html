@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>测试 thymeleaf 的使用</title>
+</head>
+<body>
+    <h1 th:text="${name}"></h1>
+<hr/>
+<div shiro:hasPermission="user:add">
+<h1>进入用户添加功能：<a href="/add">用户添加</a></h1><br/>
+</div>
+<div shiro:hasPermission="user:update">
+<h1>进入用户更新功能：<a href="/update">用户更新</a></h1><br/>
+</div>
+<h4><a href="/toLogin">登录</a></h4>
+</body>
+</html>
